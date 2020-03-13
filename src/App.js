@@ -125,6 +125,7 @@ const BottomBar = () => {
       <Column.Group size="one-half">
         <Button
           data-cy="BottomBar"
+          data-testid="BottomBar"
           id="bottom-bar"
           style={{ width: "50%", top: "1vh" }}
           onClick={() => {
