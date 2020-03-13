@@ -7,4 +7,6 @@ test("Making a storage card with a listing", () => {
   const { getByTestId, getBytext } = render(<App />);
 
   expect(getByTestId("BottomBar")).toBeInTheDocument();
+  fireEvent.click(getByTestId("filterButton"));
+  expect(getByTestId("submit").textContent).toBe("Submit");
 });

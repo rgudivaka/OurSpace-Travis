@@ -234,6 +234,7 @@ const FilterView = () => {
                   </Button.Group>
                   <br /> <br />
                   <Button
+                    data-testid="submit"
                     rounded
                     style={{ width: "20%" }}
                     onClick={() => {

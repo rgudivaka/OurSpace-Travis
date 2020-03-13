@@ -122,10 +122,10 @@ const BottomBar = () => {
         top: "96vh"
       }}
     >
-      <Column.Group size="one-half">
+      <Column.Group size="one-half" data-testid="BottomBar">
         <Button
           data-cy="BottomBar"
-          data-testid="BottomBar"
+          data-testid="filterButton"
           id="bottom-bar"
           style={{ width: "50%", top: "1vh" }}
           onClick={() => {
