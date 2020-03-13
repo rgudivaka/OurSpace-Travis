@@ -74,10 +74,8 @@ const App = () => {
     updateList([newListing].concat(listingList));
   };
 
-  if (listingList.length === 0)
-    return (
-      <PageLoader data-cy="PageLoader" active={true} color="light"></PageLoader>
-    );
+  //if (listingList.length === 0)
+  //return <PageLoader active={true} color="light"></PageLoader>;
 
   return (
     <ListingContext.Provider
@@ -126,6 +124,8 @@ const BottomBar = () => {
     >
       <Column.Group size="one-half">
         <Button
+          data-cy="BottomBar"
+          id="bottom-bar"
           style={{ width: "50%", top: "1vh" }}
           onClick={() => {
             toggleFilterViewOpen(true);
@@ -134,6 +134,7 @@ const BottomBar = () => {
             }, 0);
           }}
         >
+          Filter:
           <img src={filter} style={{ width: "2.5vh" }} />
         </Button>
         <Button style={{ width: "50%", top: "1vh" }}>

@@ -3,8 +3,13 @@ describe("Test App", () => {
     cy.visit("/");
   });
 
-  it("opens with PageLoader", () => {
+  it("opens with Bottombar", () => {
     cy.visit("/");
-    cy.get("[data-cy=PageLoader]").should("contain", "light");
+    cy.get("[data-cy=BottomBar]").should("contain", "Filter");
+  });
+  it("shows FilterView when filter button clicked", () => {
+    cy.visit("/");
+    cy.get("[data-cy=BottomBar]").click();
+    cy.get("[data-cy=FilterView]").should("contain", "Filter");
   });
 });
